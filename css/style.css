@@ -1,0 +1,388 @@
+html {
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+
+body {
+    min-width: 319px;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.04px;
+    line-height: 31px;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #1EBEA5;
+}
+.header__inner {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-end;
+}
+
+
+.main-logo {
+    display: none;
+}
+
+.header__list {
+    display: block;
+    
+}
+.header__list li {
+    list-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.header__link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .02em;
+    line-height: 20px;
+}
+.header__dropbox {
+    border: 1px solid #ccd0d5;
+    padding: 2px;
+    width: 170px;
+}
+
+
+
+
+.header__burger {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 14px;
+    z-index: 10;
+    cursor: pointer;
+}
+.header__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 6px;
+    transition: all 0.3s ease 0s;
+}
+.header__burger::before,
+.header__burger::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+.header__burger::before {
+    top: 0;
+}
+.header__burger::after {
+    bottom: 0;
+}
+
+
+
+
+.header__burger.active span {
+    transform: scale(0);
+}
+.header__burger.active::before {
+    transform: rotate(45deg);
+    top: 6px;
+    
+}
+.header__burger.active::after {
+    transform: rotate(-45deg);
+    top: 6px;
+}
+
+
+
+.header__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+
+    padding-bottom: 90px;
+    padding-left: 20px;
+    padding-right: 66px;
+    padding-top: 40px;
+    transition: all 0.3s ease 0s;   
+        background-color: #1EBEA5;
+        background-image: url(/images/center-logo.png);
+        background-repeat: no-repeat;
+        background-size: 6%;
+        background-position: 15px 14px;
+    /* overflow: auto; */
+}
+.header__menu.active {
+    right: 0;
+}
+
+
+
+
+
+/* downloadapp section */
+
+.downloadapp {
+    background-color: #1EBEA5;
+}
+
+.downloadapp__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.downloadapp__text {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.center__logo {
+    width: 100px;
+}
+
+.downloadapp__btn {
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #01e675;
+    padding: 18px 36px;
+    margin-bottom: 40px;
+    border-radius: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+
+}
+.downloadapp__btn a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: .071em;
+}
+.downloadapp__img {
+    width: 180px;
+}
+
+.app-present {
+    background-image: url(/images/app-present.png);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 0 auto;
+    background-size: 70%;
+}
+
+.app-present-img {
+    display: none;
+}
+
+
+
+.app-video {
+    color: #000;
+}
+.app-video .container {
+    padding: 0;
+}
+.app-video__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.app-video__left {
+    text-align: center;
+    background-color: #D0E9EA;
+}
+.app-video__text-block {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.app-video__title {
+    margin: 0 auto 25px;
+    padding-top: 90px;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: .05em;
+    line-height: 29px;
+}
+.app-video__text {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 30px;
+}
+.video-block img {
+    position: relative;
+    height: 140px;
+}
+
+
+
+.app-video__rigth {
+    background-color: #EDF8F5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:500px) {
+    .app-present {
+    height: 350px;
+    margin: 0 auto;
+    background-size: 40%;
+ }
+}
+
+
+
+@media (min-width:769px) {
+    .header__burger {
+        display: none;
+    }
+    .center__logo {
+        display: none;
+    }   
+    .header__list {
+        display: flex;
+        padding-left: 10px;
+    }
+    .header__link {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: .02em;
+        line-height: 20px;
+    }
+    .header__list li {
+        padding: 20px;
+        border: none;
+    }
+    .header__menu {
+        position: unset;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: #1EBEA5;
+        padding-bottom: 90px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        background-image: none;
+    }
+    .header__list-dropbox {
+        margin-left: auto;
+        padding-left: 26px;
+        position: relative;
+    }
+    .header__list-dropbox:before {
+        content: '';
+        left: -20px;
+        width: 26px;
+        position: absolute;
+        height: 26px;
+        background-image: url(/images/lang-ico.svg);
+    }
+
+    .main-logo {
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+
+    .downloadapp {
+        padding-top: 100px;
+        background-color: #fff;
+        color: #000;
+    }
+    .downloadapp__inner {
+        max-width: 322px;
+        text-align: left;
+        margin-left: auto;
+    }
+    .downloadapp__title {
+        font-size: 37px;
+        font-weight: 300;
+        line-height: 35px;
+        margin-bottom: 24px;
+    }
+    .downloadapp__text {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 36px;
+        
+        opacity: .78;
+    }
+
+    .app-present {
+        margin: 0 auto 0 auto;
+
+    }
+    .app-present-img {
+        max-width: 380px;
+        display: block;
+    }
+    .downloadapp__wrap {
+        display: flex;
+        padding-bottom: 302px;
+    }
+
+    .app-video__left {
+        width: 49%;
+        margin-right: ;
+    }
+    .app-video__rigth {
+        width: 49%;
+        margin-left: ;
+    }
+}
+
+
